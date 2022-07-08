@@ -48,18 +48,17 @@ namespace jutil
 		/// <summary>
 		/// Gets the data inside of this node.
 		/// </summary>
-		/// <returns>Data in the node.</returns>
 		inline T* GetData() { return m_Data; }
 		/// <summary>
 		/// Sets the data inside of this node. It won't delete the old data from the memory.
 		/// </summary>
-		/// <param name="newData">New data to set.</param>
+		/// <param name="newData">The new data to set.</param>
 		inline void SetData(T* newData) { m_Data = newData; }
 
 		/// <summary>
 		/// Sets the data inside of this node and delete the old data from the memory.
 		/// </summary>
-		/// <param name="newData">New data to set.</param>
+		/// <param name="newData">The new data to set.</param>
 		inline void SetDataDeleteOld(T* newData)
 		{
 			delete m_Data;
@@ -69,7 +68,6 @@ namespace jutil
 		/// <summary>
 		/// Gets the related J Object Pool.
 		/// </summary>
-		/// <returns>The J Object Pool where this node is in</returns>
 		inline JObjectPool<T>* GetPool() { return m_Pool; }
 
 		/// <summary>
