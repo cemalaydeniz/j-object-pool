@@ -15,7 +15,7 @@ namespace jutil
 			m_Pool = pool;
 			m_bIsInUse = false;
 
-			data = new T();
+			m_Data = new T();
 		}
 
 		~JObjectPoolNode()
@@ -31,7 +31,7 @@ namespace jutil
 				m_Next = nullptr;
 			}
 
-			delete data;
+			delete m_Data;
 		}
 
 		/// <summary>
@@ -49,12 +49,12 @@ namespace jutil
 		/// Gets the data inside of this node.
 		/// </summary>
 		/// <returns>Data in the node.</returns>
-		inline T* GetData() { return data; }
+		inline T* GetData() { return m_Data; }
 		/// <summary>
 		/// Sets the data inside of this node. It won't delete the old data from the memory.
 		/// </summary>
 		/// <param name="newData">New data to set.</param>
-		inline void SetData(T* newData) { data = newData; }
+		inline void SetData(T* newData) { m_Data = newData; }
 
 		/// <summary>
 		/// Sets the data inside of this node and delete the old data from the memory.
@@ -62,8 +62,8 @@ namespace jutil
 		/// <param name="newData">New data to set.</param>
 		inline void SetDataDeleteOld(T* newData)
 		{
-			delete data;
-			data = newData;
+			delete m_Data;
+			m_Data = newData;
 		}
 
 		/// <summary>
@@ -84,7 +84,7 @@ namespace jutil
 		JObjectPoolNode<T>* m_Next;
 		JObjectPoolNode<T>* m_Previous;
 
-		T* data;
+		T* m_Data;
 
 		bool m_bIsInUse;
 
