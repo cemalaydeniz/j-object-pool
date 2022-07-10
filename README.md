@@ -4,10 +4,11 @@
 # English
 
 ## J Object Pool
-This is the Object Pool data structure created with a double linked list.
+This is the Object Pool data structure created with a double linked list.\
+C# version is [here](https://github.com/cemalaydeniz/j-object-pool-csharp).
 
-## How does it work?
-The logic behind the J Object Pool is that the head node always shows the next available node while the tail node always shows the last reserved node that is still in use. When a node is needed to use, the pool returns the head node and put the node at the end of the list, which the node becomes the new tail node. If the head node is not avaialable to use, the pool's size is increased first and then it returns an available node.
+## How Does It Work?
+The logic behind the J Object Pool is that the head node always shows the next available node while the tail node always shows the last reserved node that is still in use. When a node is needed, the pool returns the head node and put the node at the end of the list, which the node becomes the new tail node. If the head node is not avaialable to use, the pool's size is increased first and then it returns an available node.
 
 ## Big O Notations
 `JObjectPool`
@@ -46,10 +47,11 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 # Deutsch
 
 ## J Object Pool
-Dies ist die Object-Pool-Datenstruktur, die mit einer Doppelverknüpfte Liste erstellt wurde.
+Dies ist die Object-Pool-Datenstruktur, die mit einer Doppelverknüpfte Liste erstellt wurde.\
+C# Version ist [hier](https://github.com/cemalaydeniz/j-object-pool-csharp).
 
 ## Wie Funktioniert Das?
-Die Logik hinter dem J Object Pool ist, dass der Kopfknoten immer den nächsten verfügbaren Knoten anzeigt und der Endknoten immer den letzten reservierte Knoten anzeigt, den noch verwendet wird. Wenn ein Knoten wird gebraucht zu nutzen, gibt der Pool den Kopfknoten und legt den Knoten an das Ende von der Liste, was der Knoten wird den neuen Endknoten. Wenn der Kopfknoten ist nicht verfügbar zu nutzen, die Größe des Pool wird zuerst erhölt und dann gibt der Pool einen verfügbaren Knoten.
+Die Logik hinter dem J Object Pool ist, dass der Kopfknoten immer den nächsten verfügbaren Knoten anzeigt und der Endknoten immer den letzten reservierte Knoten anzeigt, den noch verwendet wird. Wenn ein Knoten wird gebraucht, gibt der Pool den Kopfknoten und legt den Knoten an das Ende von der Liste, was der Knoten wird den neuen Endknoten. Wenn der Kopfknoten ist nicht verfügbar zu nutzen, die Größe des Pool wird zuerst erhölt und dann gibt der Pool einen verfügbaren Knoten.
 
 ## Big O Notationen
 `JObjectPool`
