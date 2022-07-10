@@ -199,6 +199,8 @@ namespace jutil
 
 				delete temp;
 			}
+
+			m_Count = 0;
 		}
 
 		/// <summary>
